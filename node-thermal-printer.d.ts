@@ -133,6 +133,13 @@ declare class ThermalPrinter {
   getBuffer(): Buffer;
 
   /**
+   * Set printing buffer
+   * @param Buffer
+   * @returns void
+   */
+  setBuffer(newBuffer: Buffer): void;
+
+  /**
    * Clear printing buffer
   */
   clear(): void;
@@ -253,8 +260,9 @@ declare class ThermalPrinter {
 
   /**
     * Draw a line of characters
+    * @param String optional character to be repeated
   */
-  drawLine(): void;
+  drawLine(character?: string): void;
 
   /**
    * Set height and width font size
